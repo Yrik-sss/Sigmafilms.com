@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SigmaFilms.com</title>
   <style>
     body {
@@ -21,33 +21,47 @@
     }
     .container {
       padding: 20px;
-      max-width: 900px;
+      max-width: 1200px;
       margin: auto;
     }
     h2 {
       margin-top: 40px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-left: 5px solid #e50914;
       padding-left: 10px;
     }
+    .film-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
     .film-card {
       background: #1a1a1a;
-      padding: 15px;
       border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       transition: transform 0.2s;
     }
     .film-card:hover {
       transform: scale(1.02);
     }
-    .film-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
     .film-card h3 {
       margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .film-card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .images {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .images img {
+      width: calc(50% - 2.5px);
+      border-radius: 8px;
     }
     footer {
       margin-top: 40px;
@@ -60,35 +74,81 @@
   </style>
 </head>
 <body>
-  <header>SigmaFilms.com</header>
 
+  <header>SigmaFilms.com</header>
   <div class="container">
     <h2>Популярные фильмы</h2>
+    <div class="film-grid">
 
-    <div class="film-card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="Интерстеллар">
-      <h3>Интерстеллар</h3>
-      <p>Эпический научно-фантастический фильм Кристофера Нолана. История рассказывает о команде исследователей, которая путешествует через червоточину в поисках новой планеты для человечества. Фильм исследует темы времени, любви и выживания цивилизации.</p>
-    </div>
+      <!-- Интерстеллар -->
+      <div class="film-card">
+        <h3>Интерстеллар</h3>
+        <div class="images">
+          <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="Интерстеллар 1">
+          <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Interstellar_flight.jpg" alt="Интерстеллар 2">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Interstellar_landscape.jpg" alt="Интерстеллар 3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/1a/Interstellar_Murph.jpg" alt="Интерстеллар 4">
+        </div>
+        <p>Эпический научно-фантастический фильм Кристофера Нолана о путешествии через червоточину в поисках новой планеты для человечества. История исследует темы времени, любви, жертвы и стойкости, показывая глубокую эмоциональную связь между героем Купером и его дочерью Мерф. Кроме того, фильм затрагивает научные и философские аспекты путешествий во времени, гравитации и выживания человечества.</p>
+      </div>
 
-    <div class="film-card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Inception_ver3.jpg" alt="Начало">
-      <h3>Начало</h3>
-      <p>Фильм о проникновении в сны и манипуляции сознанием. Доминик Кобб — талантливый вор, который крадет секреты из подсознания. Ему поручают сложную задачу: внедрить идею в разум человека. Фильм исследует границы реальности и фантазии, а также психологические аспекты человеческого сознания.</p>
-    </div>
+      <!-- Начало -->
+      <div class="film-card">
+        <h3>Начало (Inception)</h3>
+        <div class="images">
+          <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Inception_ver3.jpg" alt="Начало 1">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/33/Inception_City.jpg" alt="Начало 2">
+          <img src="https://upload.wikimedia.org/wikipedia/en/9/9d/Inception_cast.jpg" alt="Начало 3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/Inception_Action.jpg" alt="Начало 4">
+        </div>
+        <p>Фильм о манипуляции подсознанием и внедрении идей в сны. Доминик Кобб — мастер кражи информации из подсознания, которому поручают сложнейшую задачу: внедрить мысль в разум человека. Сюжет исследует границы сна и реальности, вопросы морали и ответственности. Каждый уровень сна полон опасностей и загадок, а визуальные эффекты и динамичные сцены создают напряжённую и захватывающую атмосферу.</p>
+      </div>
 
-    <div class="film-card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg" alt="Матрица">
-      <h3>Матрица</h3>
-      <p>Культовый фильм о природе реальности и свободе выбора. Томас Андерсон, программист по прозвищу Нео, узнает, что мир, в котором он живёт, — искусственная симуляция, управляемая машинами. Фильм исследует философские темы, технологическую зависимость и поиск истинной свободы.</p>
+      <!-- Матрица -->
+      <div class="film-card">
+        <h3>Матрица (The Matrix)</h3>
+        <div class="images">
+          <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg" alt="Матрица 1">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Matrix_fight_scene.jpg" alt="Матрица 2">
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Matrix_cast.jpg" alt="Матрица 3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/e/e3/Matrix_red_blue_pills.jpg" alt="Матрица 4">
+        </div>
+        <p>Культовый фильм о природе реальности и свободе выбора. Томас Андерсон (Нео) узнаёт, что мир — искусственная симуляция, а люди — батареи для машин. Фильм сочетает философские размышления о сознании с динамичными боевыми сценами и спецэффектами. Основные темы — поиск истины, личной свободы, противостояние системе, дружба и самоопределение.</p>
+      </div>
+
+      <!-- Бойцовский клуб -->
+      <div class="film-card">
+        <h3>Бойцовский клуб (Fight Club)</h3>
+        <div class="images">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg" alt="Бойцовский клуб 1">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/33/Fight_Club_Fight.jpg" alt="Бойцовский клуб 2">
+          <img src="https://upload.wikimedia.org/wikipedia/en/8/81/Fight_Club_Cast.jpg" alt="Бойцовский клуб 3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/12/Fight_Club_Soap.jpg" alt="Бойцовский клуб 4">
+        </div>
+        <p>История о мужчине, потерявшем контроль над своей жизнью, который создаёт подпольный бойцовский клуб, чтобы вернуть себе ощущение силы и самоуважения. Фильм исследует темы потребительства, психики, саморазрушения и противостояния обществу. Глубокий психологический сюжет и необычные повороты держат зрителя в напряжении до самого конца.</p>
+      </div>
+
+      <!-- Форсаж 5 -->
+      <div class="film-card">
+        <h3>Форсаж 5 (Fast & Furious 5)</h3>
+        <div class="images">
+          <img src="https://upload.wikimedia.org/wikipedia/en/2/28/Fast_Five_Poster.jpg" alt="Форсаж 5 1">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Fast_Five_Car_Chase.jpg" alt="Форсаж 5 2">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Fast_Five_Cast.jpg" alt="Форсаж 5 3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Fast_Five_Highway.jpg" alt="Форсаж 5 4">
+        </div>
+        <p>Экшн-фильм о команде гонщиков, совершающих рискованные ограбления и погони по всему миру. Фильм наполнен динамикой, гонками и спецэффектами. Основные темы — дружба, верность, командная работа и справедливость. Яркие сцены экшна и юмор делают фильм увлекательным для широкой аудитории.</p>
+      </div>
+
     </div>
 
     <h2>О проекте</h2>
-    <p>SigmaFilms.com — это небольшой сайт для любителей кино, где можно узнавать краткие и подробные описания популярных фильмов. Мы стараемся представить информацию увлекательно и с интересными визуальными элементами, чтобы каждый посетитель мог выбрать фильм по душе.</p>
+    <p>SigmaFilms.com — это сайт для любителей кино, где можно узнать подробные описания популярных фильмов и посмотреть качественные изображения. Мы стремимся сделать просмотр фильмов интересным и информативным.</p>
   </div>
 
   <footer>
     © 2025 SigmaFilms.com — Все права защищены
   </footer>
+
 </body>
 </html>
